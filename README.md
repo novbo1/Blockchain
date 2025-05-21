@@ -1,10 +1,10 @@
-# 🩺 Blockchain Medical Records System
+# Blockchain Medical Records System
 
 A decentralized application (DApp) built on Ethereum to securely manage and store patient medical records, including personal information, health data, diagnosis history, and lab test results. Doctors can be authorized to add medical records, while patients retain control over their own data.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Store and update **patient basic information**
 - Record **health data** such as height, weight, blood type, and medical history
@@ -16,7 +16,7 @@ A decentralized application (DApp) built on Ethereum to securely manage and stor
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Solidity** (`^0.8.17`) – Smart contract language
 - **Ethereum / Hardhat** – Blockchain environment
@@ -25,7 +25,7 @@ A decentralized application (DApp) built on Ethereum to securely manage and stor
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 ├── contracts/
@@ -46,72 +46,39 @@ MetaMask wallet extension
 Hardhat for local development
 
 1. Clone the repo
-bash
-複製
-編輯
-git clone https://github.com/yourusername/blockchain-medical-records.git
-cd blockchain-medical-records
+  bash
+  複製
+  編輯
+  git clone https://github.com/yourusername/blockchain-medical-records.git
+  cd blockchain-medical-records
 2. Install dependencies (if using Hardhat)
-bash
-複製
-編輯
-npm install
+  bash
+  複製
+  編輯
+  npm install
 3. Compile the contract
-bash
-複製
-編輯
-npx hardhat compile
+  bash
+  複製
+  編輯
+  npx hardhat compile
 4. Deploy the contract
-Use Hardhat local network or testnet (e.g. Goerli):
-
-bash
-複製
-編輯
-npx hardhat run scripts/deploy.js --network localhost
+  bash
+  複製
+  編輯
+  npx hardhat run scripts/deploy.js --network localhost
 5. Launch frontend
 Open frontend/index.html in a browser. Ensure MetaMask is connected to the same network.
 
-🧠 Smart Contract Overview
-✅ Functions
-Patient Functions
-setPatientInfo(...)
 
-getPatientInfo()
-
-setPatientHealthData(...)
-
-getPatientHealthData()
-
-getDiagnoses()
-
-getLabTests()
-
-Doctor Functions
-addDiagnosis(address patient, ...)
-
-addLabTest(address patient, ...)
-
-Owner Functions
-authorizeDoctor(address)
-
-revokeDoctor(address)
-
-withdraw()
-
-💸 Fees
-Patients must send at least 0.001 ETH when updating personal or health data.
-
-Contract owner can withdraw accumulated funds.
-
-🔐 Security & Access Control
+Security & Access Control
 Only authorized doctors can write diagnosis/lab records
 
 Only owner can manage doctor access
 
 Data is associated with patient Ethereum addresses
 
-📜 License
+License
 This project is licensed under the MIT License.
 
-🙋‍♀️ Contributions
+Contributions
 Pull requests are welcome! For major changes, open an issue first to discuss what you'd like to change.
