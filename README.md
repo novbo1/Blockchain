@@ -37,13 +37,14 @@ A decentralized application (DApp) built on Ethereum to securely manage and stor
 ├── test/                       # (Optional) Hardhat/JS test scripts
 ├── README.md
 └── hardhat.config.js           # (If using Hardhat)
-⚙️ Getting Started
+
+---
+
+## Getting Started
 Prerequisites
 Node.js v16+
 
 MetaMask wallet extension
-
-Hardhat for local development
 
 1. Clone the repo
   bash
@@ -60,25 +61,22 @@ Hardhat for local development
   bash
   複製
   編輯
-  npx hardhat compile
 4. Deploy the contract
   bash
   複製
   編輯
-  npx hardhat run scripts/deploy.js --network localhost
 5. Launch frontend
 Open frontend/index.html in a browser. Ensure MetaMask is connected to the same network.
 
-
-Security & Access Control
+---
+## Security & Access Control
 Only authorized doctors can write diagnosis/lab records
-
 Only owner can manage doctor access
-
 Data is associated with patient Ethereum addresses
-
-License
+---
+## License
 This project is licensed under the MIT License.
-
-Contributions
+---
+## Contributions
 Pull requests are welcome! For major changes, open an issue first to discuss what you'd like to change.
+---
