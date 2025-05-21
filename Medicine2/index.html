@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="title">醫療病歷紀錄系統</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:right">
+            <button onclick="setLanguage('zh')">繁體中文</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+
+        <h1 class="title" data-i18n="title">醫療病歷紀錄系統</h1>
+        <div class="button-group">
+            <button onclick="showSection('patient')" data-i18n="patient">病患</button>
+            <button onclick="showSection('doctor')" data-i18n="doctor">醫生</button>
+        </div>
+
+        <!-- 病患介面 -->
+        <div id="patient-section" class="form-section hidden">
+            <h2 data-i18n="basic_info">基礎資料</h2>
+            <input placeholder="姓名" id="p_name" data-i18n-placeholder="p_name">
+            <input placeholder="性別" id="p_gender" data-i18n-placeholder="p_gender">
+            <input placeholder="出生日期" id="p_birthDate" data-i18n-placeholder="p_birthDate">
+            <input placeholder="身分證字號" id="p_nationalID" data-i18n-placeholder="p_nationalID">
+            <input placeholder="電話" id="p_phone" data-i18n-placeholder="p_phone">
+            <input placeholder="地址" id="p_addressDetail" data-i18n-placeholder="p_address">
+            <input placeholder="教育程度" id="p_education" data-i18n-placeholder="p_education">
+            <input placeholder="職業" id="p_occupation" data-i18n-placeholder="p_occupation">
+            <input placeholder="緊急聯絡人" id="p_emergencyContact" data-i18n-placeholder="p_emergency">
+            <input placeholder="關係" id="p_emergencyRelation" data-i18n-placeholder="p_emergencyRelation">
+
+            <h2 data-i18n="health_info">健康資料</h2>
+            <input placeholder="身高(cm)" id="p_height" data-i18n-placeholder="p_height">
+            <input placeholder="體重(kg)" id="p_weight" data-i18n-placeholder="p_weight">
+            <input placeholder="血型" id="p_bloodType" data-i18n-placeholder="p_bloodType">
+            <input placeholder="病史" id="p_medicalHistory" data-i18n-placeholder="p_history">
+            <input placeholder="備註" id="p_extraNotes" data-i18n-placeholder="p_notes">
+
+            <button onclick="previewPatient()" data-i18n="preview">預覽</button>
+            <button onclick="uploadPatient()" data-i18n="upload">上鏈</button>
+
+            <pre id="previewPatientData"></pre>
+        </div>
+
+        <!-- 醫生介面 -->
+        <div id="doctor-section" class="form-section hidden">
+            <h2 data-i18n="add_diagnosis">新增診斷</h2>
+            <input placeholder="病患地址" id="d_patient" data-i18n-placeholder="d_patient">
+            <input placeholder="日期" id="d_date" data-i18n-placeholder="d_date">
+            <input placeholder="症狀" id="d_symptoms" data-i18n-placeholder="d_symptoms">
+            <input placeholder="診斷" id="d_diagnosis" data-i18n-placeholder="d_diagnosis">
+            <input placeholder="處方" id="d_prescriptions" data-i18n-placeholder="d_prescriptions">
+            <input placeholder="備註" id="d_notes" data-i18n-placeholder="d_notes">
+
+            <h2 data-i18n="add_lab">新增檢驗</h2>
+            <input placeholder="檢驗類型" id="l_testType" data-i18n-placeholder="l_testType">
+            <input placeholder="結果" id="l_result" data-i18n-placeholder="l_result">
+            <input placeholder="日期" id="l_date" data-i18n-placeholder="l_date">
+            <input placeholder="備註" id="l_notes" data-i18n-placeholder="l_notes">
+
+            <button onclick="previewDoctor()" data-i18n="preview">預覽</button>
+            <button onclick="uploadDoctor()" data-i18n="upload">上鏈</button>
+
+            <pre id="previewDoctorData"></pre>
+
+            <h2 data-i18n="history_label">病例歷史</h2>
+            <input placeholder="病患地址" id="historyAddress" data-i18n-placeholder="history_address">
+            <button onclick="fetchHistory()" data-i18n="query">查詢</button>
+            <pre id="historyData"></pre>
+        </div>
+    </div>
+</body>
+</html>

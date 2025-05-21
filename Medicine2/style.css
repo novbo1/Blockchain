@@ -1,0 +1,67 @@
+body {
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background-color: #f0f8f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+    text-align: center;
+    color: green;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006400;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
+pre {
+    background: #eee;
+    padding: 10px;
+    white-space: pre-wrap;
+    border-radius: 8px;
+}
+
+#historyResult {
+    margin-top: 10px;
+}
